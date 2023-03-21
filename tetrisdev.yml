@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tetris-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+     app: tetris
+  template:
+   metadata:
+    labels:
+     app: tetris
+     env: stage
+   spec:
+    containers:
+    - name: tetris-container
+      image: mycontainerasp2.azurecr.io/samples/tetris:latest
+      ports:
+      - containerPort: 80
