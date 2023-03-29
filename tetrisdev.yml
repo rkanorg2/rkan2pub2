@@ -15,6 +15,6 @@ spec:
    spec:
     containers:
     - name: tetris-container
-      image: mycontainerasp2.azurecr.io/samples/tetris:latest
+      image: XXXX.azurecr.io/samples/tetris:latest
       ports:
       - containerPort: 80
